@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <div class="dragitem"  draggable="true">Drag Me</div>
+    <div class="dragto"  draggable="false">Drag Here</div>
+    <!-- <div class="final"></div> -->
+    <script>
+        const dragItem=document.querySelector(".dragitem");
+        const dragTo=document.querySelector(".dragto")
+        dragItem.addEventListener("dragstart",dragStart);
+        dragItem.addEventListener("dragend",dragEnd);
+        dragTo.addEventListener("dragenter",dragDrop);
+        dragItem.addEventListener("dragover",dragOver);
+        initialX=0;
+        initialY=0;
+        originalPositionX=0;
+        originalPositionY=0;
+
+        function dragStart(e){
+            
+            // console.log(e)
+            // console.log(initialX,initialY);
+            // console.log(e)
+            initialX=e.clientX;
+            initialY=e.clientY;
+            // console.log(e.offsetX,e.offsetY)
+            // console.log("start",e.clientX,e.clientY)
+        }
+        
+        function dragOver(e){
+            // console.log(e)
+            // dragItem.style.transform=`translate(${(e.clientX-initialX+e.layerX-e.offsetX)*.5}px,${(e.clientY-initialY+e.layerY - e.offsetY)*.5}px)`;
+                   }
+        function dragEnd(e){
+                       
+                        dragItem.style.transform=`translate(${(e.clientX-initialX+e.layerX-e.offsetX)}px,${(e.clientY-initialY+e.layerY - e.offsetY)}px)`;
+
+        }
+        function dragDrop(e){
+            console.log(e)
+        }
+
+
+    </script>
+</body>
+</html>

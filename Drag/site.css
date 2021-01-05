@@ -1,0 +1,22 @@
+body{
+    background:#000;
+
+}
+.dragitem,.dragto{
+    display:inline-block;
+    position: absolute;
+    top:50%;
+    left:50%;
+    padding:20px;
+    /* width:200px; */
+}
+.dragitem{
+    color:white;
+    background:red;
+    z-index: 2;
+}
+.dragto{
+    background:#fff;
+        top:20%;
+    left:40%;
+}

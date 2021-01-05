@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <div class="container">
+        <div>  </div>
+        <h4 class="h3">Format your code properly with a formatter before minifying or it will give errors.</h4>
+        
+        <textarea name="html" rows=20 placeholder="Place JavaScript or CSS Code here."></textarea>
+        <br>
+        <div onclick="minify(this.parentNode.querySelector('textarea').value)" id="html-submit"><span></span>Minify</div>
+        <h3><span id="original"></span>Minified Code Here.<span id="final"></span></h3>
+        <div class="minified"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html> 
